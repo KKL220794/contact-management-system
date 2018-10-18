@@ -1,0 +1,12 @@
+.fonts{
+  font-family: 'Bitter', serif;
+
+}
+input.ng-touched.ng-invalid{
+  border: 1px solid red;
+}
+.font {
+  font-size: 0.8rem;
+  color: red;
+
+}

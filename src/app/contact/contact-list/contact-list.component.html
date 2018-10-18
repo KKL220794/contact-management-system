@@ -1,0 +1,38 @@
+<!-- <button class="btn btn-primary" (click)="getData()">get data</button><br>
+<button class="btn btn-primary" (click)="saveData()">save  data</button><br> -->
+<div class="row ">
+  <div class="col-md-7">
+    <input type="text" placeholder="Search...." (keyup)="onFilter(f.value) "
+      class="form-control" #f>
+      <span *ngIf="searched" class="font">{{filteredContact.length}} contacts found</span>
+      <span *ngIf="!searched" class="font">Search contacts with name, phone Number and email</span>
+    </div>
+  </div>
+    <br>
+<div class="row ">
+  <div class="col-md-12">
+    <div class="table-responsive scroll table-hover table-sm table-bordered">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th> #</th>
+          <th> First Name</th>
+          <th> Ph Number</th>
+          <th> Email Id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cont of filteredContact;let i= index"
+        routerLinkActive="active"
+        style="cursor: pointer"
+        (click)="onSelected(i)">
+          <td>{{i+1}}</td>
+          <td>{{cont.fname}}</td>
+          <td>{{cont.phno}}</td>
+          <td>{{cont.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>

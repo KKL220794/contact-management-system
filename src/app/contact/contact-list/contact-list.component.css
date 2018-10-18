@@ -1,0 +1,9 @@
+.scroll {
+  overflow:scroll;
+  height:70vh;
+}
+.font {
+  font-size: 0.8rem;
+  color: red;
+
+}

@@ -1,0 +1,100 @@
+  <div class="row">
+    <div class="col-md-8">
+      <img class="img-thumbnail" [src]="employee.image" style="max-height: 300px"/>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-5">
+              <b>Name: </b>
+        </div>
+        <div class="col-md-7">
+          {{employee.fname | uppercase}}&nbsp; {{employee.lname | uppercase}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5">
+          <b>Gender :</b>
+        </div>
+        <div class="col-md-7">
+          {{employee.gender}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <b>Date of Birth:</b>
+        </div>
+        <div class="col-md-7">
+          {{employee.DOB | date}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <b>Phone :</b>
+        </div>
+        <div class="col-md-7">
+          {{employee.phno}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <b>Email :</b>
+        </div>
+        <div class="col-md-7">
+          {{employee.email}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <b>Address :</b>
+        </div>
+        <div class="col-md-7">
+          {{employee.address}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <b>City :</b>
+        </div>
+        <div class="col-md-7">
+          {{employee.city}} , {{employee.province}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <b>PINCODE :</b>
+        </div>
+        <div class="col-md-7">
+          {{employee.postal}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<br>
+
+<div class="myPanelFooter">
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="row">
+          <div class="col-md-2 col-xs-4 col-sm-2">
+              <button class="btn btn-primary" (click)="onEdit()">Edit</button>
+          </div>
+          <div class="col-md-2 col-xs-4 col-sm-2">
+              <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+          </div>
+          <div class="col-md-2 col-xs-4 col-sm-2">
+              <button class="btn btn-dark" (click)="onCancel()">Cancel</button>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-4 col-sm-2">
+          &nbsp;
+      </div>
+    </div>
+  </div>
+</div>
+
